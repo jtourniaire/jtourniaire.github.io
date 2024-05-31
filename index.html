@@ -1,34 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-
+  <meta charset="UTF-8">
   <title>Julie Tourniaire</title>
   <meta name="description" content=“ I am a mathematician and my research is in probability theory. My work focuses on
     microscopic models for front propagation and their applications to ecology and population genetics.>
   <meta name="viewport" content="width=device-width">
-
   <style>
     @import url('https://fonts.cdnfonts.com/css/gill-sans-2');
 
-    strong {
-      font-family: "Gill Sans";
-      font-weight: bold;
-    }
+    body {
 
-    html body {
-      margin-left: 15%;
-      margin-right: 15%;
-      background-color: rgb(213, 228, 217);
+      background-color: #e6f5e6;
+      margin: 0;
+      padding: 0;
       font-size: large;
+      font-weight: 500;
       font-family: "Gill Sans", sans-serif;
-      width: 65%;
-      text-size-adjust: 100%;
-    }
-
-    img {
-      float: right;
-      padding: 25px
     }
 
     hr.new5 {
@@ -36,6 +25,78 @@
       border-radius: 2px;
     }
 
+    ul {
+      list-style-type: disc;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    li::marker {
+      font-size: 1rem;
+    }
+
+    .container {
+
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+
+    }
+
+    @media screen and (min-width:480px) {
+      .sidebar {
+        flex: 1;
+        background-color: hsla(157, 37%, 31%, 0.473);
+        color: #fff;
+        padding: 20px;
+        width: 190px;
+        position: fixed;
+        height: 100%
+      }
+    }
+
+    @media screen and (max-width:480px) {
+      .sidebar {
+        text-align: center;
+        width: 100%;
+        background-color: hsla(157, 37%, 31%, 0.473);
+        color: #fff;
+        position: relative;
+
+
+      }
+
+    }
+
+
+    @media screen and (max-width:480px) {
+      .content {
+        flex: 3;
+        padding: 20px;
+        position: relative;
+        margin-left: 20px;
+      }
+    }
+
+    @media screen and (min-width:480px) {
+      .content {
+        flex: 3;
+        padding: 20px;
+        position: relative;
+        margin-left: 220px;
+      }
+    }
+
+    .profile-photo {
+      width: 100%;
+      max-width: 150px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      text-align: center;
+    }
 
     a:link {
       color: darkgreen;
@@ -50,9 +111,9 @@
     }
 
     a:hover {
-      color: darkgreen;
+      color: rgba(0, 100, 0, 0.497);
       background-color: transparent;
-      text-decoration: underline;
+
     }
 
     a:active {
@@ -61,211 +122,516 @@
       text-decoration: underline;
     }
 
-    tbody tr td:first-child {
-      width: 90px;
-      min-width: 90px;
-      max-width: 90px;
-      word-break: break-all;
-      vertical-align: top;
+    .bouton {
+      display: block;
+      border-radius: 10px;
+      color: #ffffff;
+      text-align: left;
+      font-weight: 600;
+      font-size: 20px;
+      padding: 5px;
+      width: 170px;
+      margin-top: 10px;
+      cursor: pointer;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    .bouton1 {
+      background-color: hsla(157, 37%, 31%, 0.321);
+    }
+
+    .bouton:hover {
+      background-color: hsla(156, 33%, 83%, 0.941);
+    }
+
+
+    .timeline-object {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      position: relative;
+      font-size: .8em;
+
+    }
+
+
+    .timeline-object.complete::before {
+      content: '';
+      display: block;
+      position: absolute;
+
+      width: 3px;
+      height: 154px;
+      background-color: rgba(0, 100, 0, 0.887);
+      left: 15px;
+      bottom: 25px;
+
+
+    }
+
+    .timeline-status {
+
+      margin-left: 7px;
+      height: 20px;
+      width: 20px;
+      border-radius: 100%;
+      background-color: rgb(0, 100, 0);
+      font-size: large;
+
+    }
+
+
+    .timeline-object:not(.complete) .timeline-status {
+
+      background-color: rgb(0, 100, 0);
+      border: 1px solid rgb(0, 100, 0);
     }
   </style>
 </head>
 
-
 <body>
-  <header id="myheader">
-    <h2 style=" color: black;text-align:center;font-family:'Arial'">Julie TOURNIAIRE</h2>
-    <hr class="new5">
-  </header>
+  <div class="container">
+    <div class="sidebar">
 
-  <div>
-    <img class="image" width="200" src="./picture.png" />
-    <h3> About me.</h3>
-    <p>I am currently a Postdoctoral Researcher in maths at the University
-      of Vienna. I am part of the FWF Project <em>Waves in Population Genetics</em>
-      whose PI is <a href=https://homepage.univie.ac.at/emmanuel.schertzer/
-        style="color:hsla(157, 37%, 31%, 0.82);font-weight:500">Emmanuel Schertzer</a>.
-    </p>
-    <p>
-      I did my Ph.D. at the &Eacute;cole Polytechnique, CMAP, under the supervision of Pascal
-      Maillard & Ga&euml;l Raoul.
-      The manuscript of my thesis, entitled <i>Spatial dynamic of interfaces in ecology: deterministic and stochastic
-        models</i> can be found <a href=https://theses.hal.science/tel-03534375 />here</a>. </p>
+      <p style="text-align: center;">
 
-    <p> My research is in probability theory. My work focuses on microscopic models for front propagation
-      (in particular branching systems) and their
-      applications to ecology and population genetics. More generally, I am interested in the
-      impact of structure on the genetic diversity of
-      a population.
-    </p>
+        <img src="picture.png" alt="Julie Tourniaire" class="profile-photo">
+      </p>
+
+      <a href="#Home" , class="bouton bouton1">Home</a>
+
+      <a href="#Contact" , class="bouton">Contact</a>
+      <a href="#Publications" , class="bouton">Publications</a>
+      <a href="#CV" , class=bouton>CV</a>
+      <a href="#Talks" , class=bouton>Talks</a>
+
+
+
+
+    </div>
+    <div class="content">
+      <h2 style="text-align: left;">Julie TOURNIAIRE</h2>
+
+
+
+      <h3 id="Home"> About me.</h3>
+      <p>I am currently a Postdoctoral Researcher in maths at the University
+        of Vienna. I am part of the FWF Project <em>Waves in Population Genetics</em>
+        whose PI is <a href=https://homepage.univie.ac.at/emmanuel.schertzer/ style="font-weight:500">Emmanuel
+          Schertzer</a>.
+      </p>
+      <p>
+        I did my Ph.D. at the &Eacute;cole Polytechnique, CMAP, under the supervision of Pascal
+        Maillard & Ga&euml;l Raoul.
+        The manuscript of my thesis, entitled <i>Spatial dynamic of interfaces in ecology: deterministic and stochastic
+          models</i> can be found <a href=https://theses.hal.science/tel-03534375 />here</a>. </p>
+
+      <p> My research is in probability theory. My work focuses on microscopic models for front propagation
+        (in particular branching systems) and their
+        applications to ecology and population genetics. More generally, I am interested in the
+        impact of structure on the genetic diversity of
+        a population.
+      </p>
+      <h3 id="Contact"> Contact.</h3>
+      <p>Faculty of Mathematics, Oskar-Morgenstern-Platz 1, 1090 Wien</p>
+      <p><B>Email:</B> julie.tourniaire 'at' univie.ac.at </p>
+
+
+      <hr class="new5">
+
+
+
+      <h3> MMEE 2024</h3>
+      <p><a href=https://homepage.univie.ac.at/zsofia.talyigas/ style="font-weight:500; ">Zsofia Talyigas
+        </a> and I will chair a mini-symposium at
+        the
+        <a href=https://ps-mathematik.univie.ac.at/e/index.php?event=mmee2024>Mathematical Models in Ecology and Evolution (MMEE) conference </a> (July
+        15-18, Vienna) on
+        <em>Branching processes as models for structured populations</em>.
+      </p>
+
+
+      <hr class="new5">
+
+      <h3 id="Publications"> Publications and preprints.</h3>
+
+      <ul>
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Reduction of the effective population size in a branching
+            particle system in the moderate mutation-selection regime </p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> with <a href=https://homepage.univie.ac.at/florin.boenkost/
+              style="font-weight:500">F.
+              Boenkost</a> and
+            <a href=https://kseniakhudiakovacom.wordpress.com style="font-weight:500">K.
+              A.
+              Khudiakova</a>
+          </p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;">
+            2024, <em>preprint. </em> <a href=https://arxiv.org/pdf/2404.17527>Arxiv version</a></p>
+        </li>
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Convergence of spatial branching processes to alpha-stable
+            CSBPs: Genealogy of semi-pushed fronts </p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> with <a href=http://www.normalesup.org/~foutelrodier/
+              style="font-weight:500">F. Foutel-Rodier</a> and
+            <a href=https://homepage.univie.ac.at/emmanuel.schertzer/ style="font-weight:500">E. Schertzer</a>
+          </p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;">
+            2024, <em>preprint. </em> <a href=https://arxiv.org/pdf/2402.05096.pdf>Arxiv version</a></p>
+        </li>
+
+
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Spectral analysis and k-spine decomposition of inhomogeneous
+            branching Brownian motions. Genealogies in fully pushed fronts </p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> with
+            <a href=https://homepage.univie.ac.at/emmanuel.schertzer/ style="font-weight:500">E. Schertzer</a>
+          </p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;">
+            2023, <em>Accepted
+              in Annals of Probability. </em> <a href=https://arxiv.org/pdf/2301.01697>Arxiv version</a></p>
+        </li>
+
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> A branching particle system as a model of semi pushed
+            fronts </p>
+          <p style="margin-bottom: 2px; margin-top: 0px;">
+            2021, <em>Accepted
+              in Annals of Probability. </em> <a href=https://arxiv.org/pdf/2111.00096.pdf>Arxiv version</a></p>
+        </li>
+
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Spatial dynamics of a population in a heterogeneous
+            environment </p>
+          <p style="margin-bottom: 2px; margin-top: 0px;"> with <a href=https://www.math.univ-toulouse.fr/~pmaillar/
+              style="font-weight:500">P.
+              Maillard</a> and
+            <a href=http://www.cmap.polytechnique.fr/~raoul/ style="font-weight:500">G.
+              Raoul</a>.
+          </p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;">
+            2021, <em>preprint. </em> <a href=https://arxiv.org/pdf/2105.06985.pdf>Arxiv version</a></p>
+        </li>
+
+
+      </ul>
+      <hr class="new5">
+
+      <h3 id="CV"> Short CV.</h3>
+
+      <ul>
+        <li>
+          <h4 style="margin-left: 10px; margin-bottom: 2px;">Postdoctoral researcher at UniWien</h4>
+
+
+            <p style="font-size: large; margin-top: 0px; margin-left: 10px;margin-bottom: 0px;">FWF project
+              <em>Waves in population genetics</em> (Austrian Science Fund)
+            </p>
+            <p style="font-size: large; margin-top: 0px; margin-left: 10px;margin-bottom: 0px;">Principal
+              Investigator <a href=https://homepage.univie.ac.at/emmanuel.schertzer/ style="font-weight:500">Emmanuel
+                Schertzer</a>. </p>
+            <p style="font-size: large; margin-top: 0px; margin-left: 10px;"> since March 2024 </p>
+
+
+        </li>
+
+        <li>
+          <h4 style="margin-left: 10px; margin-bottom: 2px;">Postdoctoral researcher at IST Austria</h4>
+
+            <p style="font-size: large; margin-top: 0px; margin-left: 10px;margin-bottom: 0px;">Marie
+              Sk&#322odowska-Curie fellow, IST Bridge Program, <a href=https://ista.ac.at/home>ISTA</a></p>
+            <p style="font-size: large; margin-top: 0px; margin-left: 10px;margin-bottom: 0px;"><a
+                href=https://ist.ac.at/en/research/barton-group>
+                Evolutionary genetics group (Barton group)</a> </p>
+            <p style="font-size: large; margin-top: 0px; margin-left: 10px;"> March 2022 &ndash; March 2024 </p>
+        </li>
+
+        <li>
+          <h4 style="margin-left: 10px; margin-bottom: 2px; width=500px;">ATER at INSA Toulouse</h4>
+
+            <p style="font-size: large; margin-top: 0px; margin-left: 10px; margin-bottom: 0px;">Teaching assistant
+            </p>
+            <p style="font-size: large; margin-top: 0px; margin-left: 10px;"> Sept. 2021 &ndash; March 2022 </p>
+        </li>
+
+        <li>
+          <h4 style="margin-left: 10px; margin-bottom: 2px;">Ph.D in mathematics, &Eacute;cole Polytechnique </h3>
+              <p style="font-size: large; margin-top: 0px; margin-left: 10px; margin-bottom: 0px;"><a 
+                href=https://cmap.ip-paris.fr>Centre de
+                Math&eacute;matiques Appliqu&eacute;es</a> </p>
+              <p style="font-size: large; margin-top: 0px; margin-left: 10px; margin-bottom: 0px;"><i>Spatial dynamic
+                  of interfaces in ecology: deterministic and stochastic
+                  models</i></p>
+              <p style="font-size: large; margin-top: 0px; margin-left: 10px; margin-bottom: 0px;">Under the
+                supervision of <a href=https://www.math.univ-toulouse.fr/~pmaillar/
+                style="font-weight:500">P.
+                Maillard</a> and
+              <a href=http://www.cmap.polytechnique.fr/~raoul/ style="font-weight:500">G.
+                Raoul</a>.</p>
+              <p style="font-size: large; margin-top: 0px; margin-left: 10px;"> Sept. 2018 &ndash; Sept. 2021</p>
+        </li>
+        <li>
+          <h4 style="margin-left: 10px; margin-bottom: 2px;">Master degree in PDEs, UPMC</h4>
+              <p style="font-size: large; margin-top: 0px; margin-left: 10px; margin-bottom: 0px;">2018
+              </p>
+        </li>
+      </ul>
+<!-- 
+      <div class="timeline" ; style="flex-shrink: unset;">
+        <div class="timeline-object ">
+          <div class="timeline-status"></div>
+          <div class="timeline-content">
+            <div>
+              <h3 style="margin-left: 10px; margin-bottom: 2px;">Postdoctoral researcher at UniWien</h3>
+
+              <span>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px;margin-bottom: 0px;">FWF project
+                  <em>Waves in population genetics</em> (Austrian Science Fund)
+                </p>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px;margin-bottom: 0px;">Principal
+                  Investigator <a href=https://homepage.univie.ac.at/emmanuel.schertzer/
+                    style="font-weight:500">Emmanuel Schertzer</a>. </p>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px;"> since March 2024 </p>
+              </span>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-object complete">
+          <div class="timeline-status"></div>
+          <div class="timeline-content">
+            <div>
+              <h3 style="margin-left: 10px; margin-bottom: 2px;">Postdoctoral researcher at IST Austria</h3>
+
+              <span>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px;margin-bottom: 0px;">Marie
+                  Sk&#322odowska-Curie fellow, IST Bridge Program, <a href=https://ista.ac.at/home>ISTA</a></p>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px;margin-bottom: 0px;"><a
+                    href=https://ist.ac.at/en/research/barton-group>
+                    Evolutionary genetics group (Barton group)</a> </p>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px;"> March 2022 - March 2024 </p>
+              </span>
+
+            </div>
+          </div>
+        </div>
+        <div class="timeline-object complete">
+          <div class="timeline-status"></div>
+          <div class="timeline-content">
+            <div>
+              <h3 style="margin-left: 10px; margin-bottom: 2px; width=500px;">ATER at INSA Toulouse</h3>
+
+              <span>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px; margin-bottom: 0px;">Teaching assistant
+                </p>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px;"> Sept. 2021 - March 2022 </p>
+              </span>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-object complete">
+          <div class="timeline-status"></div>
+          <div class="timeline-content">
+            <div>
+              <h3 style="margin-left: 10px; margin-bottom: 2px;">Ph.D in mathematics, &Eacute;cole Polytechnique </h3>
+
+              <span>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px; margin-bottom: 0px;">Centre de
+                  Math&eacute;matiques Appliqu&eacute;es </p>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px; margin-bottom: 0px;"><i>Spatial dynamic
+                    of interfaces in ecology: deterministic and stochastic
+                    models</i></p>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px; margin-bottom: 0px;">Under the
+                  supervision of Pascal Maillard & Ga&euml;l Raoul.</p>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px;"> Sept. 2018 - Sept. 2021</p>
+              </span>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-object complete">
+          <div class="timeline-status"></div>
+          <div class="timeline-content">
+            <div>
+              <h3 style="margin-left: 10px; margin-bottom: 2px;">Master degree in PDEs, UPMC</h3>
+
+              <span>
+                <p style="font-size: large; margin-top: 0px; margin-left: 10px; margin-bottom: 0px;">2018
+                </p>
+
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+
+      <hr class="new5">
+
+
+      <h3 id="Talks"> Talks.</h3>
+
+      <ul>
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Evolution in structured populations: recent progress and new
+            challenges </p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> University of Oxford,
+            March 2024
+          </p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> <a href="tourniaire.pdf">slides</a>
+          </p>
+
+        </li>
+
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Workshop: Ancestral lines for (multitype) genetic models</p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> Bielefeld University,
+            September 2023
+          </p>
+
+        </li>
+
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> 43rd Conference on Stochastic Processes and their
+            Applications</p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> Lisbon,
+            July 2023
+          </p>
+
+        </li>
+
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> 21st Informs Applied Probability Society Conference</p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> Nancy,
+            June 2023
+          </p>
+
+        </li>
+
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Workshop: Spatial models in population genetics</p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> Vienna,
+            November 2022
+          </p>
+
+        </li>
+
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Junior female researchers in probability</p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> Berlin, October 2022
+
+          </p>
+
+        </li>
+
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Austrian stochastic days</p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> Vienna, September 2022
+
+          </p>
+
+        </li>
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Bath-Beijing-Paris branching stuctures meeting</p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> online, September 2021
+
+          </p>
+
+        </li>
+
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Modern stochastics: theory and applications</p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> online, June 2021
+
+          </p>
+
+        </li>
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Workshop: ANR Integro-Differential Equations from
+            Evolutionary biology</p>
+
+          <p style="margin-bottom: 2px; margin-top: 0px;"> online, March 2021
+
+          </p>
+
+        </li>
+      </ul>
+
+      <h3> Seminars.</h3>
+      <ul>
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Probability seminar, Universit&eacute; de Besan&ccedil;on
+          </p>
+          <p style="margin-bottom: 2px; margin-top: 0px;"> January 2024
+          </p>
+        </li>
+
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Probability seminar, Universit&eacute; d'Angers</p>
+          <p style="margin-bottom: 2px; margin-top: 0px;"> November 2023
+          </p>
+        </li>
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Probability seminar, University of Oxford</p>
+          <p style="margin-bottom: 2px; margin-top: 0px;"> November 2023
+          </p>
+        </li>
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> BioMath seminar, University of Vienna</p>
+          <p style="margin-bottom: 2px; margin-top: 0px;"> November 2022
+          </p>
+        </li>
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> BioMath seminar, University of Vienna</p>
+          <p style="margin-bottom: 2px; margin-top: 0px;"> April 2022
+          </p>
+        </li>
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;"> Vienna Probability seminar, TU Wien</p>
+          <p style="margin-bottom: 2px; margin-top: 0px;"> April 2022
+          </p>
+        </li>
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;">Probability sminar, Institut Math&eacute;matique de Toulouse
+          </p>
+          <p style="margin-bottom: 2px; margin-top: 0px;"> March 2021
+          </p>
+        </li>
+        <li>
+          <p style="margin-bottom: 2px; font-weight: 600;">Journ&eacute; de rentr&eacute;e du CMAP, &Eacute;cole
+            Polytechnique</p>
+          <p style="margin-bottom: 2px; margin-top: 0px;"> October 2020
+          </p>
+        </li>
+      </ul>
+    </div>
   </div>
-
-  <div>
-    <h3> Contact.</h3>
-    <p>Faculty of Mathematics, Oskar-Morgenstern-Platz 1, 1090 Wien</p>
-    <p><B>Email:</B> julie.tourniaire 'at' univie.ac.at</a></p>
-  </div>
-
-  <hr class="new5">
-
-  <div>
-
-    <h3> MMEE 2024</h3>
-    <p><a href=https://homepage.univie.ac.at/zsofia.talyigas/
-        style="color:hsla(157, 37%, 31%, 0.82);font-weight:500">Zsofia Talyigas
-      </a> and I will chair a mini-symposium at
-      the
-      <a href=&page=talk-details&id=1388>Mathematical Models in Ecology and Evolution (MMEE) conference </a> (July
-      15-18, Vienna) on
-      <em>Branching processes as models for structured populations</em>.
-    </p>
-
-  </div>
-  <hr class="new5">
-  <div>
-    <h3> Publications and preprints.</h3>
-    <p>
-    <ul>
-      <li> <a href=https://arxiv.org/pdf/2404.17527> Reduction of the effective population size in a branching
-          particle system in the moderate mutation-selection regime</a><br> <a
-          href=https://homepage.univie.ac.at/florin.boenkost/ style="color:hsla(157, 37%, 31%, 0.82);font-weight:500">F.
-          Boenkost</a>,
-        <a href=https://kseniakhudiakovacom.wordpress.com style="color:hsla(157, 37%, 31%, 0.82);font-weight:500">K. A.
-          Khudiakova</a>, J. Tourniaire,
-        <em> Arxiv prepint (2024). </em>
-      </li>
-      <li>
-        <a href=https://arxiv.org/pdf/2402.05096.pdf> Convergence of spatial branching processes to alpha-stable
-          CSBPs: Genealogy of semi-pushed fronts</a> <br> <a href=http://www.normalesup.org/~foutelrodier/
-          style="color:hsla(157, 37%, 31%, 0.82);font-weight:500">F. Foutel-Rodier</a>,
-        E. Schertzer, J. Tourniaire, <em> Arxiv
-          prepint
-          (2024). </em>
-      </li>
-      <li> <a href=https://arxiv.org/pdf/2301.01697.pdf>Spectral analysis and k-spine decomposition of inhomogeneous
-          branching Brownian motions. Genealogies in fully pushed fronts</a><br>
-        E. Schertzer, J. Tourniaire, <em> Accepted
-          in Annals of Probability (2023). </em>
-      </li>
-      <li> <a href=https://arxiv.org/pdf/2111.00096.pdf>A branching particle system as a model of semi pushed
-          fronts</a><br>J. Tourniaire, <em> Accepted in Annals of Probability (2021)</em>.
-      </li>
-      <li> <a href=https://arxiv.org/pdf/2105.06985.pdf>
-          Spatial dynamics of a population in a heterogeneous environment</a><br> <a href=https://www.math.univ-toulouse.fr/~pmaillar/  style="color:hsla(157, 37%, 31%, 0.82);font-weight:500">P. Maillard</a>, 
-          <a href=http://www.cmap.polytechnique.fr/~raoul/  style="color:hsla(157, 37%, 31%, 0.82);font-weight:500">G. Raoul</a>, J. Tourniaire,
-        <em> Arxiv preprint (2021)</em>.
-      </li>
-    </ul>
-    </p>
-  </div>
-
-  <hr class="new5">
-  <h3> Short CV.</h3>
-  <table style="font-size: large;width:  100%;">
-    <tr>
-      <td>2024-</td>
-      <td> Postdoctoral Researcher at the <a href="https://mathematik.univie.ac.at/en/">University of Vienna</a></td>
-    </tr>
-    <tr>
-      <td>2022-2024</td>
-      <td> Marie Sk&#322odowska-Curie fellow, IST Bridge Program, <a href = https://ista.ac.at/home>ISTA</a> </td>
-    </tr>
-    <tr>
-      <td></td>
-      <td> <a href=https://ist.ac.at/en/research/barton-group>
-          Evolutionary genetics group (Barton group)</a></td>
-    </tr>
-    <tr>
-      <td>2018-2021</td>
-      <td> Ph.D in mathematics, &Eacute;cole Polytechnique (CMAP) </td>
-    </tr>
-    <tr>
-      <td>2018</td>
-      <td> Master degree in PDEs, UPMC </td>
-    </tr>
-  </table>
-
-  <hr class="new5">
-
-  <div>
-    <h3> Talks.</h3>
-    <table style="font-size: large;width: 100%;">
-      <tr>
-        <td>2024</td>
-        <td>
-          Evolution in structured populations: recent progress and new challenges,
-          University of Oxford</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Probability seminar, Universit&eacute; de Besan&ccedil;on</td>
-      </tr>
-      <tr>
-        <td>2023</td>
-        <td>Probability seminar, Universit&eacute; d'Angers</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Probability seminar, University of Oxford</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Workshop: Ancestral lines for (multitype) genetic models, Bielefeld University
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>43rd Conference on Stochastic Processes and their Applications, Lisbon
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>21st Informs Applied Probability Society Conference, Nancy
-        </td>
-      </tr>
-      <tr>
-        <td>2022</td>
-        <td>Workshop: Spatial models in population genetics, Vienna
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Biomath seminar, Vienna
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td> Junior female researchers in probability, Berlin
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td> Austrian stochastic days, Vienna
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td> Biomath seminar, Vienna
-        </td>
-      </tr>
-      <tr>
-        <td>2021</td>
-        <td> Bath-Beijing-Paris branching stuctures meeting, online
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td> Modern stochastics: theory and applications, online
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td> Probability seminar, Institut math&eacute;matique de Toulouse
-        </td>
-      </tr>
-    </table>
-  </div>
-
 
 </body>
 
