@@ -146,22 +146,30 @@ position: relative;
       transition: all 0.5s;
     }
 
-    .bouton1 {
-      background-color: hsla(157, 37%, 31%, 0.321);
-    }
-
     .bouton:hover {
       background-color: hsla(156, 33%, 83%, 0.941);
     }
+    .bouton1 {
 
-
-    .timeline-object {
-      display: flex;
-      align-items: center;
+      display: block;
+      border-radius: 20px;
+      color: #ffffff;
+   
+      text-align: left;
+      font-weight: 600;
+      font-size: 20px;
+      padding: 5px;
+      width: 170px;
       margin-top: 10px;
-      position: relative;
-      font-size: .8em;
-
+      cursor:pointer;
+      
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+    .bouton1:hover {
+      background-color: hsla(156, 33%, 83%, 0.941);
     }
 
 
@@ -179,23 +187,6 @@ position: relative;
 
     }
 
-    .timeline-status {
-
-      margin-left: 7px;
-      height: 20px;
-      width: 20px;
-      border-radius: 100%;
-      background-color: rgb(0, 100, 0);
-      font-size: large;
-
-    }
-
-
-    .timeline-object:not(.complete) .timeline-status {
-
-      background-color: rgb(0, 100, 0);
-      border: 1px solid rgb(0, 100, 0);
-    }
   </style>
 </head>
 
@@ -208,14 +199,14 @@ position: relative;
         <img src="picture.png" alt="Julie Tourniaire" class="profile-photo">
       </p>
 
-      <a href="#Home" , class="bouton bouton1">Home</a>
+      <a href="#Home" , class="bouton1">&#8962; Home</a>
 
       <a href="#Contact" , class="bouton">Contact</a>
       <a href="#Publications" , class="bouton">Publications</a>
       <a href="#CV" , class=bouton>CV</a>
       <a href="#Talks" , class=bouton>Talks</a>
 
-
+ <a href="#Teaching", class="bouton">Teaching</a>
 
 
     </div>
@@ -264,7 +255,7 @@ position: relative;
       <hr class="new5">
 
       <h3 id="Publications"> Publications and preprints.</h3>
-
+    
       <ul>
         <li>
           <p style="margin-bottom: 2px; font-weight: 600;"> Reduction of the effective population size in a branching
@@ -625,7 +616,7 @@ position: relative;
           </p>
         </li>
         <li>
-          <p style="margin-bottom: 2px; font-weight: 600;">Probability sminar, Institut Math&eacute;matique de Toulouse
+          <p style="margin-bottom: 2px; font-weight: 600;">Probability seminar, Institut Math&eacute;matique de Toulouse
           </p>
           <p style="margin-bottom: 2px; margin-top: 0px;"> March 2021
           </p>
@@ -637,7 +628,100 @@ position: relative;
           </p>
         </li>
       </ul>
+      <hr class="new5">
+<h3 id="Teaching">Teaching</h2>
+      During my PhD, I was a teaching assistant (<em>monitrice</em>) at the
+      &Eacute;cole Polytechnique.
+      I taught Analysis to first year students in the <em>Bachelor of Science</em>
+      for three years
+      <ul>
+        <li>
+          <h4 style="margin-bottom: 2px;">Analysis I</h4>
+          2018W, 2019W & 2020W (<B>192h</B>)
+          <p style="margin-top: 0px; margin-bottom: 2px;">
+            <em>Set of numbers, Real and complex sequences, Topology of <B>R</B>,
+              Real valued functions of a real variable, Taylor formulas and Taylor
+              expansions,
+              Real and complex-valued series.</em> (1A)
+          </p>
+          <p style="margin-top: 0px; margin-bottom: 2px;">
+            Language: English
+          </p>
+        </li>
+      </ul>
+      Between September 2021 and March 2022, I was a teaching assistant
+      (<em>ATER</em>) at the
+      INSA Toulouse. During 2021W, I was in charge of the following tutorials
+      (total <B>100h</B>)
+      <ul>
+        <li>
+          <h4 style="margin-bottom: 2px;">Analysis I</h4>
+          <p style="margin-top: 0px; margin-bottom: 2px;"><em>
+              Complex numbers, Functions, Polynomials.</em> (1A)</p>
+          <p style="margin-top: 0px; margin-bottom: 2px;">
+            Language: French
+          </p>
+        </li>
+        <li>
+          <h4 style="margin-bottom: 2px;">Reasoning</h4>
+          <p style="margin-top: 0px; margin-bottom: 2px;"><em>Reasoning, Set,
+              Sequences.</em> (1A)</p>
+          <p style="margin-top: 0px; margin-bottom: 2px;">
+            Language: French
+          </p>
+
+
+        </li>
+        <li>
+          <h4 style="margin-bottom: 2px;">Harmonic Analysis and PDEs</h4>
+          <p style="margin-top: 0px; margin-bottom: 2px;"><em>Classification of
+              PDEs, Fourier series, Fourier transform, Heat equation,
+              Sturm-Liouville Problems, Separation of variables for PDEs.
+            </em>(3IC) </p>
+          <p style="margin-top: 0px; margin-bottom: 2px;">
+            Language: French
+          </p>
+        </li>
+        <li>
+          <h4 style="margin-bottom: 2px;">Probability and Statistics</h4>
+          <em>Conditional probabilities, Statistical tests, Principal Component
+            Analysis,
+            Linear models, Stats in R.
+          </em> (3ICBE)
+          <p style="margin-top: 0px; margin-bottom: 2px;">
+            Language: French
+          </p>
+        </li>
+      </ul>
+      During my curriculum at the &Eacute;cole Normale Sup&eacute;rieure de Cachan,
+      I was an oral examiner in a French <em>Classe pr&eacute;paratoire</em>.
+      <ul>
+        <li>
+          <h4 style="margin-bottom: 2px;">Lyc&eacute;e Louis-le-Grand (Paris)</h4>
+          PC*,
+          2hours/week, 2015&ndash;2016 and 2017&ndash;2018.
+          <p style="margin-top: 0px; margin-bottom: 2px;">
+
+          </p>
+        </li>
+      </ul>
+      <hr class="new5">
+I also obtained the <em>Agr&eacute;gation de Math&eacute;matiques</em> and took
+training courses about new teaching methods and scientific outreach.
+      <ul>
+      <li>
+        <h4  style="margin-bottom: 2px;">Agr&eacute;gation de Math&eacute;matiques</h4>
+        French highest secondary-school and university teaching degree in Mathematics 
+        <p style="margin-top: 0px; margin-bottom: 2px;">Option B&ndash; Deterministic 
+        modelling (<em>Calcul Scientifique</em>)
+      </p>
+      <p style="margin-top: 0px; margin-bottom: 2px;"> ENS Cachan, 2017.
+      </p>
+      </li>
+
     </div>
+
+
   </div>
 
 </body>
